@@ -41,7 +41,7 @@ const reducer = (state, action) => {
   }
 };
 
-export const useFetch = (resource, ...options) => {
+export const useFetch = (resource) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
