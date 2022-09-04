@@ -3,6 +3,8 @@ import React from "react";
 import { useFetch } from "../useFetch";
 import { BASE_URL } from "./consts";
 
+import { TodoItem } from "./TodoItem";
+
 export function Todos() {
   const { loading, error, data } = useFetch(`${BASE_URL}/todos?_limit=10`);
 
@@ -11,12 +13,16 @@ export function Todos() {
 
   if (data)
     return (
-      <div>
-        {data.map((item) => (
-          <div key={item.id}>
-            <div>{item.title}</div>
-          </div>
+      <ul>
+        {data.map(({ id, title, completed }) => (
+          <TodoItem
+            key={id}
+            id={id}
+            title={title}
+            completed={completed}
+            onChange={() => { console.log('!! onChange')}}
+          />
         ))}
-      </div>
+      </ul>
     );
 }
