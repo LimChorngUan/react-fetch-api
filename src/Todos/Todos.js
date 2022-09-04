@@ -19,8 +19,7 @@ export function Todos() {
             key={id}
             id={id}
             title={title}
-            completed={completed}
-            onChange={() => { console.log('!! onChange')}}
+            defaultChecked={completed}
           />
         ))}
       </ul>

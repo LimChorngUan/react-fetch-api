@@ -9,4 +9,4 @@ export const mockTodos = [
     title: "todo2",
     completed: true,
   },
-]
+];
