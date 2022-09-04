@@ -1,7 +1,11 @@
+import { Todos } from './Todos/Todos';
+
 export function App() {
   return (
-    <div className="App">
-      React + REST api exercise
+    <div>
+      <h1>Todo list:</h1>
+      
+      <Todos />
     </div>
   );
 }
